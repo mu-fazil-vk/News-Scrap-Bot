@@ -1,0 +1,33 @@
+{
+  "name": "News-Scrap-Bot",
+  "description": "Scrap news from website, and send to whatsapp",
+  "repository": "https://github.com/fazil-vk/News-Scrap-Bot",
+  "logo": "https://telegra.ph/file/65b8e02615d6a44c81159.jpg",
+  "keywords": [
+    "whatsbot",
+    "whatsapp-newsbot",
+    "whatsapp-bot",
+    "whatsapp"
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+    },
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-google-chrome.git"
+    }
+  ],
+  "stack": "container",
+  "env": {
+    "WA_GRP": {
+      "description": "Your WhatsApp group link.",
+      "value": "",
+      "required": true
+    },
+    "WA_GRP_ID": {
+      "description": "your whatsapp group id like '120353041772870155@g.us'",
+      "value": "",
+      "required": true
+    }
+  }
+}
